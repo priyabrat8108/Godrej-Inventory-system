@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 97%;
+    --foreground: 204 40% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 204 40% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 204 40% 16%;
+
+    --primary: 200 76% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 18% 95%;
+    --secondary-foreground: 204 40% 16%;
+
+    --muted: 210 18% 95%;
+    --muted-foreground: 210 10% 46%;
+
+    --accent: 210 18% 92%;
+    --accent-foreground: 204 40% 16%;
+
+    --destructive: 0 65% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 16% 87%;
+    --input: 210 16% 87%;
+    --ring: 200 76% 20%;
+
+    --radius: 0.125rem;
+
+    --sidebar-background: 200 76% 20%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 200 76% 20%;
+    --sidebar-accent: 200 55% 28%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 200 55% 28%;
+    --sidebar-ring: 0 0% 100%;
+
+    --success: 142 60% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply bg-card border border-border p-5 flex flex-col gap-1;
+  }
+
+  .stat-card-value {
+    @apply text-2xl font-bold text-foreground;
+  }
+
+  .stat-card-label {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .data-table {
+    @apply w-full text-sm;
+  }
+
+  .data-table th {
+    @apply bg-primary/5 text-left px-4 py-3 font-semibold text-foreground text-xs uppercase tracking-wider border-b-2 border-primary/20 whitespace-nowrap;
+  }
+
+  .data-table td {
+    @apply px-4 py-3 border-b border-border text-foreground;
+  }
+
+  .data-table tr:hover td {
+    @apply bg-muted/60;
+  }
+
+  .form-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+  }
+
+  .page-title {
+    @apply text-lg font-semibold text-foreground;
+  }
+
+  .section-title {
+    @apply text-sm font-semibold text-foreground mb-3 uppercase tracking-wide;
+  }
+}
